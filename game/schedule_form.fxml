@@ -15,11 +15,11 @@
       <Button layoutX="756.0" layoutY="521.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="130.0" text="PERSONAL" />
       <Group layoutX="277.0" layoutY="12.0">
          <children>
-            <ProgressBar layoutX="385.0" layoutY="28.0" prefWidth="200.0" progress="1.0">
+            <ProgressBar fx:id="C_HP_BAR" layoutX="385.0" layoutY="28.0" prefWidth="200.0" progress="1.0">
                <padding>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </padding></ProgressBar>
-            <ProgressBar layoutX="385.0" layoutY="50.0" prefWidth="200.0" progress="1.0">
+            <ProgressBar fx:id="P_HP_BAR" layoutX="385.0" layoutY="50.0" prefWidth="200.0" progress="1.0">
                <padding>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </padding></ProgressBar>
@@ -31,11 +31,11 @@
                <padding>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </padding></Label>
-            <Label layoutX="462.0" layoutY="27.0" text="100/100">
+            <Label fx:id="C_HP_remaining" layoutX="462.0" layoutY="27.0" text="100/100">
                <padding>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </padding></Label>
-            <Label layoutX="462.0" layoutY="51.0" text="100/100">
+            <Label fx:id="P_HP_remaining" layoutX="462.0" layoutY="51.0" text="100/100">
                <padding>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </padding></Label>
@@ -180,22 +180,22 @@
       </Group>
       <Group layoutY="-10.0">
          <children>
-            <Label layoutX="157.0" layoutY="68.0" text="剩餘 : XXX">
+            <Label fx:id="the_quest_remaining" layoutX="157.0" layoutY="68.0" text="剩餘 : XXX">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="248.0" layoutY="68.0" text=" 期限 : X 月 Y 周前">
+            <Label fx:id="quest_time_remaining" layoutX="248.0" layoutY="68.0" text=" 期限 : X 月 Y 周前">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="40.0" layoutY="36.0" text="第X周">
+            <Label fx:id="num_of_week" layoutX="40.0" layoutY="36.0" text="第X周">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="40.0" layoutY="68.0" text="本次任務 : XXX">
+            <Label fx:id="the_quest" layoutX="40.0" layoutY="68.0" text="本次任務 : XXX">
                <font>
                   <Font size="16.0" />
                </font>
