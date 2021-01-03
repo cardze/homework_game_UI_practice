@@ -4,9 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.event.ActionEvent;
+
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
 
 public class ScheduleFormController {
     @FXML
@@ -54,6 +55,4 @@ public class ScheduleFormController {
         this.P_HP_remaining.setText(full_text);
         this.P_HP_BAR.setProgress(bar_progress);
     }
-
-
 }

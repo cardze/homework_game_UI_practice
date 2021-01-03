@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.ScheduleFormController">
    <children>
       <Button fx:id="continue_btn" onAction="#continueChoosingEvent" layoutX="756.0" layoutY="521.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="130.0" text="CONTINUE" />
       <Group layoutX="277.0" layoutY="12.0">
