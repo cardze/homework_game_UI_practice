@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.ScheduleFormController">
    <children>
-      <Button fx:id="continue_btn" onAction="#continueChoosingEvent" layoutX="756.0" layoutY="521.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="130.0" text="CONTINUE" />
+      <Button fx:id="continue_btn" layoutX="756.0" layoutY="521.0" mnemonicParsing="false" onAction="#continueChoosingEvent" prefHeight="65.0" prefWidth="130.0" text="CONTINUE" />
       <Group layoutX="277.0" layoutY="12.0">
          <children>
             <ProgressBar fx:id="C_HP_BAR" layoutX="385.0" layoutY="28.0" prefWidth="200.0" progress="1.0">
@@ -178,29 +178,33 @@
             </VBox>
          </children>
       </Group>
-      <Group layoutY="-10.0">
+      <VBox layoutX="50.0" layoutY="39.0">
          <children>
-            <Label fx:id="the_quest_remaining" layoutX="157.0" layoutY="68.0" text="剩餘 : XXX">
+            <Label fx:id="num_of_week" layoutX="50.0" layoutY="39.0" text="第X周">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="quest_time_remaining" layoutX="248.0" layoutY="68.0" text=" 期限 : X 月 Y 周前">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label fx:id="num_of_week" layoutX="40.0" layoutY="36.0" text="第X周">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label fx:id="the_quest" layoutX="40.0" layoutY="68.0" text="本次任務 : XXX">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="71.0" prefHeight="22.0" prefWidth="422.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="the_quest" layoutX="50.0" layoutY="71.0" text="本次任務 : XXX" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="the_quest_remaining" layoutX="167.0" layoutY="71.0" text="剩餘 : XXX" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="quest_time_remaining" layoutX="263.0" layoutY="71.0" text=" 期限 : 剩餘 X 天" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
          </children>
-      </Group>
+      </VBox>
    </children>
 </AnchorPane>

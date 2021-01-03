@@ -1,15 +1,19 @@
 package game;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.event.ActionEvent;
 
+import javafx.fxml.Initializable;
 
 import javax.swing.*;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ScheduleFormController {
+public class ScheduleFormController implements Initializable {
     @FXML
     private Label the_quest, num_of_week, quest_time_remaining, the_quest_remaining, C_HP_remaining, P_HP_remaining;
     @FXML
@@ -32,8 +36,8 @@ public class ScheduleFormController {
         this.num_of_week.setText(full_text);
     }
     @FXML
-    public void setQuest_time_remaining(Integer month, Integer date){
-        String full_text=" 期限 : "+month.toString()+" 月 "+date.toString()+" 周前";
+    public void setQuest_time_remaining(Integer remaining_days){
+        String full_text="剩餘 "+remaining_days+" 天";
         this.quest_time_remaining.setText(full_text);
     }
     @FXML
@@ -54,5 +58,10 @@ public class ScheduleFormController {
         Double bar_progress= Double.valueOf(remaining_HP/100);
         this.P_HP_remaining.setText(full_text);
         this.P_HP_BAR.setProgress(bar_progress);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
     }
 }
