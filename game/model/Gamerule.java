@@ -76,4 +76,7 @@ public class Gamerule {
     public String getCurrentEventName(){
         return gameEventArrayList.get(currentEvent).getEventName();
     }
+    public Integer getCurrentDate(){ return this.currentDay; }
+    public Integer getRemainDay(){ return this.gameEventArrayList.get(currentEvent).getRemainDays();}
+    public Integer getRemainProgress(){ return this.gameEventArrayList.get(currentEvent).getDoneValue();}
 }

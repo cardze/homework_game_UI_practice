@@ -1,10 +1,10 @@
 package game.model;
 
 public enum GameEventType {
-    CAMP("Camp",50),
-    HALLOWEEN("Halloween",60),
-    BBQ("BBQ",70),
-    ASSOCIATIONMEETING("Association Meeting",80);
+    CAMP("電腦營",50),
+    HALLOWEEN("萬聖節",60),
+    BBQ("系烤",70),
+    ASSOCIATIONMEETING("系週會",80);
 
     private final String type;
     private final int doneValue;

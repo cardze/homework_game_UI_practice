@@ -36,6 +36,9 @@ public class ScheduleFormController implements Initializable {
         //TO DO
         //放按下按鈕後需要做的事
         gamerule.doCycle();
+        this.setNum_of_week(gamerule.getCurrentDate()/5+1);
+        setQuest_time_remaining_day(this.gamerule.getRemainDay());
+        setThe_quest_remaining_progress(this.gamerule.getRemainProgress());
         switch (Main.gameState){
             case WIN:
                 //Win
@@ -58,12 +61,12 @@ public class ScheduleFormController implements Initializable {
         this.num_of_week.setText(full_text);
     }
     @FXML
-    public void setQuest_time_remaining(Integer remaining_days){
+    public void setQuest_time_remaining_day(Integer remaining_days){
         String full_text="剩餘 "+remaining_days+" 天";
         this.quest_time_remaining.setText(full_text);
     }
     @FXML
-    public void setThe_quest_remaining(Integer quailty){
+    public void setThe_quest_remaining_progress(Integer quailty){
         String full_text="剩餘 : "+quailty.toString();
         this.the_quest_remaining.setText(full_text);
     }
@@ -80,12 +83,6 @@ public class ScheduleFormController implements Initializable {
         Double bar_progress= Double.valueOf(remaining_HP/100);
         this.P_HP_remaining.setText(full_text);
         this.P_HP_BAR.setProgress(bar_progress);
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        this.gamerule = new Gamerule();
-        setThe_quest(this.gamerule.getCurrentEventName());
     }
     public void setAllSignInvisiable(){
         this.main_director_sign.setVisible(false);
@@ -126,4 +123,12 @@ public class ScheduleFormController implements Initializable {
         this.showing_choosed_role_img.setImage(new Image(STORAGE_MANAGER));
 
     }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        this.gamerule = new Gamerule();
+        setThe_quest(this.gamerule.getCurrentEventName());
+        setQuest_time_remaining_day(this.gamerule.getRemainDay());
+        setThe_quest_remaining_progress(this.gamerule.getRemainProgress());
+    }
+
 }
