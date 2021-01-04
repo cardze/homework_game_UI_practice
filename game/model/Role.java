@@ -1,14 +1,14 @@
-package game.testing_file;
+package game.model;
 
-public abstract class Character {
+public class Role {
 
     protected int workAbility;
     protected int motionValue;
-    protected int breakMotionValue;
+    protected int naturalRecoverRate;
     protected String name;
     protected TaskState[] calender;
     public int breakMotionValue() {
-        return -breakMotionValue;
+        return -naturalRecoverRate;
     }
     public int getWorkAbility() {
         return workAbility;
@@ -22,7 +22,7 @@ public abstract class Character {
         return name;
     }
 
-    public void setworkAbility(int workAbility) {
+    public void setWorkAbility(int workAbility) {
         this.workAbility = workAbility;
     }
     
@@ -34,9 +34,6 @@ public abstract class Character {
         this.calender[i] = tk;
     }
 
-    
-    // public abstract void skill();
-    // public abstract void passive();
 
     public void getHurt(int i){
         this.motionValue -= i;
@@ -46,8 +43,6 @@ public abstract class Character {
     }
 
     public boolean checkMotion(){
-        if(motionValue <= 0)
-            return false;
-        return true;
+        return motionValue > 0;
     }
 }

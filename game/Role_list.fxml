@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.RoleListController">
+   <children>
+      <VBox alignment="CENTER" layoutX="55.0" layoutY="128.0" prefHeight="345.0" prefWidth="601.0" spacing="20.0">
+         <children>
+            <Label layoutX="285.0" layoutY="30.0" text="你的隊友" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="70.0" layoutY="62.0" prefHeight="275.0" prefWidth="601.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="pic_show_role_detail_0" fitHeight="244.0" fitWidth="150.0" layoutX="39.0" layoutY="57.0" onMouseClicked="#OnClickShowDetail_0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Pictures/Fudō_Myōō.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pic_show_role_detail_1" fitHeight="277.0" fitWidth="150.0" layoutX="49.0" layoutY="67.0" onMouseClicked="#OnClickShowDetail_1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Pictures/Fudō_Myōō.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pic_show_role_detail_2" fitHeight="277.0" fitWidth="150.0" layoutX="59.0" layoutY="77.0" onMouseClicked="#OnClickShowDetail_2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Pictures/Fudō_Myōō.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pic_show_role_detail_3" fitHeight="277.0" fitWidth="150.0" layoutX="69.0" layoutY="87.0" onMouseClicked="#OnClickShowDetail_3" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Pictures/Fudō_Myōō.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pic_show_role_detail_4" fitHeight="277.0" fitWidth="150.0" layoutX="79.0" layoutY="97.0" onMouseClicked="#OnClickShowDetail_4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Pictures/Fudō_Myōō.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="OK_btn_and_CONTI" alignment="CENTER" contentDisplay="TOP" layoutX="273.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#OnMouseClicked" text="OK，大家真可靠" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

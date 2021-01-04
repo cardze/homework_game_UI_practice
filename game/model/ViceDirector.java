@@ -1,17 +1,14 @@
-package game.testing_file;
+package game.model;
 
-public class YS extends Character {
-
-    //int week[];
-    // to count how many days my skill can still work
-    public YS() {
+public class ViceDirector extends Role {
+    ViceDirector(){
         this.name = "副會長";
         this.motionValue = 100;
         this.workAbility = 1;
-        this.breakMotionValue = 15;
+        this.naturalRecoverRate = 15;
         this.calender = new TaskState[5];
         for (int i = 0; i < 5; i++) {
-            calender[i] = TaskState.none;
+            calender[i] = TaskState.NONE;
         }
     }
 
@@ -23,5 +20,4 @@ public class YS extends Character {
         calender[i] = task;
     }
     //set specific days event
-
 }

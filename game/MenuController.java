@@ -1,7 +1,5 @@
 package game;
 
-import game.testing_file.ComputerCamp;
-import game.testing_file.CountDay;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +14,7 @@ import java.util.ResourceBundle;
 
 
 public class MenuController implements Initializable {
-    private ComputerCamp cp;
+//    private ComputerCamp cp;
 
     @FXML
     private Button startBtn;
@@ -28,9 +26,9 @@ public class MenuController implements Initializable {
         root = loader.load();
         ScheduleFormController sfc=loader.getController();
         //開始設定畫面
-        sfc.setThe_quest(cp.getEventName());
+//        sfc.setThe_quest(cp.getEventName());
         sfc.setNum_of_week(new Integer(1));
-        sfc.setThe_quest_remaining(cp.getDoneValue());
+//        sfc.setThe_quest_remaining(cp.getDoneValue());
 
         stage = (Stage) startBtn.getScene().getWindow();
 
@@ -38,9 +36,9 @@ public class MenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    public void setCP(ComputerCamp cp){
-        this.cp=cp;
-    }
+//    public void setCP(ComputerCamp cp){
+//        this.cp=cp;
+//    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

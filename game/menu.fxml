@@ -23,7 +23,7 @@
       </Button>
       <ImageView cache="true" fitHeight="504.0" fitWidth="863.0" layoutX="13.0" layoutY="14.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <image>
-            <Image url="@material/118535163_3295120633911288_2312673812083203967_n.jpg" />
+            <Image url="@material/MenuImg.png" />
          </image>
       </ImageView>
    </children>
